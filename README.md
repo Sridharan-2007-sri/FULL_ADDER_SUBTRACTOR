@@ -40,16 +40,64 @@ Borrow out = A'Bin + A'B + BBin
 
 **Procedure**
 
-Write the detailed procedure here
+1.Type the program in Quartus software.
 
+2.Compile and run the program.
+
+3.Generate the RTL schematic and save the logic diagram.
+
+4.Create nodes for inputs and outputs to generate the timing diagram.
+
+5.For different input combinations generate the timing diagram.
 **Program:**
 
-/* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
-*/
+/* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming.
+1.FULL ADDER
+
+```
+module DE4(a,b,cin,sum,carry); 
+input a,b,cin; 
+output sum,carry; 
+assign sum=( (a ^ b)^cin); 
+assign carry= ( (a & b)| ( cin &(a ^ b ))); 
+endmodule
+```
+2.FULL SUBTRACTOR
+
+```
+module DE4(a,b,bin,difference,borrow); 
+input a,b,bin; 
+output difference,borrow; 
+assign difference= ( (a ^ b)^bin); 
+assign borrow= ( ( a & b)| ( bin & ((a ^ b )))); 
+endmodule
+```
+Developed by: Sridharan B RegisterNumber: 25016127
 
 **RTL Schematic**
+1.FULL ADDER
+
+![EXP4 1](https://github.com/user-attachments/assets/bbfd3711-37cf-478d-a9cc-3de8a6ef1d85)
+
+
+
+2.FULL SUBTRACTOR
+
+![EXP4 2](https://github.com/user-attachments/assets/b76906aa-e587-4aa5-92c7-1132a2fd1fa4)
+
+
+
 
 **Output Timing Waveform**
+1.FULL ADDER
+
+![EXP4 3](https://github.com/user-attachments/assets/887a918e-7d10-41a6-9068-436b960c115d)
+
+
+2.FULL SUBTRACTOR
+
+![EXP4 4](https://github.com/user-attachments/assets/185e11aa-2a21-4b5c-a4a3-986b60890016)
+
 
 **Result:**
 
